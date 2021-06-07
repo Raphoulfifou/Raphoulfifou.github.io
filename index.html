@@ -1,41 +1,57 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/light.css" type="text/css" id="lnk">
-	<link rel="icon" href="images/rare_logo.png">
-	<script src="js/main.js"></script>
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/rare_logo.png" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" id="theme" />
+    <script type="text/javascript" src="js/main.js"></script>
 
-	<title>RARE | Raphoulfifou</title>
+    <title>RARE | Raphoulfifou</title>
 </head>
 
-<body>
+<body id="body">
 
-	<div class="header">
-		<p>Rare pack</p>
-	</div>
-	
-	<div id="modebutton">
-		<button onclick="changeMode(this)">Dark Mode</button>
-	</div>
+    <div id="header">
+        <div id="header_title">Rare pack</div>
+    </div>
 
-	<div class="menu">
-		<div class="menu_title">Réseaux</div>
-			<ul>
-				<li><a href="https://www.youtube.com/channel/UCEndwkDsarCh1TJmfQ6t7PQ" class="social_link">Youtube</a></li>
-				<li><a href="https://www.reddit.com/user/Raphoulfifou" class="social_link">Reddit</a></li>
-				<li><a href="https://discord.gg/W4secTP" class="social_link">Discord</a></li>
-			</ul>
-	</div>
+    <div id="button_container">
+        <button onclick="changeMode(this)">Dark Mode</button>
+    </div>
 
-	<div id="text-container">
-		<p>Rare pack stands for Raphoulfifou's Rare pack and it's textures are photorealistic</p>
-	</div>
+    <div class="social">
+        <div class="social_title">Raphoulfifou</div>
+        <ul>
+            <li><a href="https://www.youtube.com/channel/UCEndwkDsarCh1TJmfQ6t7PQ" class="social_link">Youtube</a></li>
+            <li><a href="https://www.reddit.com/user/Raphoulfifou" class="social_link">Reddit</a></li>
+            <li><a href="https://discord.gg/W4secTP" class="social_link">Discord</a></li>
+        </ul>
+    </div>
 
-	<div id="footer">
-		Copyright &copy; 2020 |  <b>Designed by <i>Raphoulfifou</i></b> <br/><i>All rights reserved</i>
-	</div>
+    <div id="container">
+        <h1>About RARE pack</h1>
+
+        <div>
+            <b>RARE pack(Raphoulfifou's Resource pack)</b> is a texture pack wich goal is to test new things with Minecraft
+        </div>
+
+        <div>
+            <h2>Some screenshots</h2>
+            <img src="screenshots/img1.png" alt="screenshot1" id="screenshot_container" />
+        </div>
+    </div>
+
+    <div class="link_container">
+        <a class="nav_button" href="#about">About</a>
+        <a class="nav_button" href="#downloads">Downloads</a>
+        <a class="nav_button" href="#other">Other</a>
+    </div>
+
+    <div id="footer">
+        Copyright &copy; 2021 |  <b>Designed by <i>Raphoulfifou</i></b> <br /><i>All rights reserved</i>
+    </div>
 
 </body>
 </html>

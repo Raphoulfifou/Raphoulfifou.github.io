@@ -1,15 +1,15 @@
+﻿/* Main page */
 function changeMode(button) {
-	let buttonWhenDark = "Dark Mode";
-	let buttonWhenLight = "Light Mode";
-	var currentCSSFile = document.getElementById("lnk");
-	
-	if(button.innerHTML == buttonWhenDark) {
-		button.innerHTML = buttonWhenLight;
-		currentCSSFile.setAttribute("href", "css/dark.css");
-	}
-	
-	else if(button.innerHTML == buttonWhenLight) {
-		button.innerHTML = buttonWhenDark;
+	let buttonWhileDark = "Light Mode";
+	let buttonWhileLight = "Dark Mode";
+	var currentCSSFile = document.getElementById("theme");
+
+	if (button.innerHTML == buttonWhileDark) {
+		button.innerHTML = buttonWhileLight;
 		currentCSSFile.setAttribute("href", "css/light.css");
+	}
+	else if (button.innerHTML == buttonWhileLight) {
+		button.innerHTML = buttonWhileDark;
+		currentCSSFile.setAttribute("href", "css/dark.css");
 	}
 }
