@@ -1,0 +1,26 @@
+/* Main */
+
+/* Container */
+#container {
+    margin: 0 auto;
+    width: 750px;
+}
+
+#screenshot_container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 130%;
+}
+
+/* Background Image */
+#background_image{
+    background-blend-mode: darken;
+    width: auto;
+}
+
+#footer {
+    text-align: center;
+    font-size: 12px;
+    margin: 10px auto;
+}

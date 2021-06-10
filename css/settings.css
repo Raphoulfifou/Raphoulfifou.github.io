@@ -1,0 +1,55 @@
+/* Settings */
+.settings{
+    display: block;
+}
+
+.settings_title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* General */
+.general {
+    width: 140px;
+    align-self: center;
+    padding: 0 20px 0 20px;
+    font-size: 12px;
+}
+
+    .general ul {
+        margin: 0;
+        padding: 10px 0 10px 15px;
+        list-style-type: none;
+    }
+
+    .general li {
+        padding-top: 2px;
+        list-style-type: none;
+    }
+
+.general_title {
+    font-size: 20px;
+}
+
+/* Theme */
+.theme {
+    width: 140px;
+    align-self: center;
+    padding: 0 20px 0 20px;
+    font-size: 12px;
+}
+
+    .theme ul {
+        margin: 0;
+        padding: 10px 0 10px 15px;
+        list-style-type: none;
+    }
+
+    .theme li {
+        padding-top: 2px;
+        list-style-type: none;
+    }
+
+.theme_title {
+    font-size: 20px;
+}
