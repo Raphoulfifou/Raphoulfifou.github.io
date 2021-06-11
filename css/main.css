@@ -27,6 +27,11 @@
     width: 100%; /* Full width */
 }
 
+span {
+    font-style: italic;
+    text-decoration: underline;
+}
+
 #footer {
     text-align: center;
     font-size: 12px;
