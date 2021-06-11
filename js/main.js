@@ -5,10 +5,10 @@ function changeMode(self) {
 
 	if (currentUsedModeIcon.getAttribute("class") == "fas fa-sun" ) {
 		currentUsedCSSFile.setAttribute("href", "css/light.css");
-		currentUsedModeIcon.setAttribute("class", "fas fa-moon")
+		currentUsedModeIcon.setAttribute("class", "fas fa-moon");
 	}
 	else if (currentUsedModeIcon.getAttribute("class") == "fas fa-moon") {
 		currentUsedCSSFile.setAttribute("href", "css/dark.css");
-		currentUsedModeIcon.setAttribute("class", "fas fa-sun")
+		currentUsedModeIcon.setAttribute("class", "fas fa-sun");
 	}
 }

@@ -4,20 +4,53 @@ body {
     font-family: Verdana;
     font-size: 17px;
     color: #fdfdfd;
-    background-image: url("images/img1.png");
-    background-attachment: fixed;
-    background-position: right top;
 }
 
-/* Header */
-#header {
-    width: stretch;
-    background: #1e1e1e;
-    height: 60px;
+/* Horizontal icon bar */
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
 }
 
-#header_title {
-    text-align: center;
-    color: red;
-    font-size: 40px;
+    .icon-bar a {
+        float: left; /* Float links side by side */
+        text-align: center; /* Center-align text */
+        width: 16.66666666667%; /* Equal width (6 icons with 16.66666666667% width each ~= 100%) */
+        padding: 12px 0; /* Some top and bottom padding */
+        transition: all 0.3s ease; /* Add transition for hover effects */
+        color: white; /* White text color */
+        font-size: 28px; /* Increased font size */
+    }
+
+        .icon-bar a:hover {
+            background-color: #292929; /* Add a hover color */
+        }
+
+.active {
+    background-color: #04AA6D; /* Add an active/current color */
 }
+
+/* Side navigation bar */
+.sidenav {
+    width: auto;
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    left: 8px;
+    background: #555;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #04AA6D;
+        display: block;
+    }
+
+        .sidenav a:hover {
+            color: white;
+        }
