@@ -1,15 +1,14 @@
 ﻿/* Main page */
-function changeMode(button) {
-	let buttonWhileDark = "Light Mode";
-	let buttonWhileLight = "Dark Mode";
-	var currentCSSFile = document.getElementById("theme");
+function changeMode(self) {
+	var currentUsedCSSFile = document.getElementById("theme");
+	var currentUsedModeIcon = document.getElementById("mode_icon");
 
-	if (button.innerHTML == buttonWhileDark) {
-		button.innerHTML = buttonWhileLight;
-		currentCSSFile.setAttribute("href", "css/light.css");
+	if (currentUsedModeIcon.getAttribute("class") == "fas fa-sun" ) {
+		currentUsedCSSFile.setAttribute("href", "css/light.css");
+		currentUsedModeIcon.setAttribute("class", "fas fa-moon")
 	}
-	else if (button.innerHTML == buttonWhileLight) {
-		button.innerHTML = buttonWhileDark;
-		currentCSSFile.setAttribute("href", "css/dark.css");
+	else if (currentUsedModeIcon.getAttribute("class") == "fas fa-moon") {
+		currentUsedCSSFile.setAttribute("href", "css/dark.css");
+		currentUsedModeIcon.setAttribute("class", "fas fa-sun")
 	}
 }

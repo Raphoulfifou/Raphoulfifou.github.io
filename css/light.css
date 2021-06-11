@@ -18,18 +18,3 @@ body {
     color: red;
     font-size: 40px;
 }
-
-.button_mode {
-    background-color: white;
-    color: #292929;
-    font-size: 16px;
-    padding: 6px 12px;
-    border: 2px solid #292929;
-    border-radius: 4px;
-    transition-duration: 0.4s;
-}
-
-    .button_mode:hover {
-        background-color: #292929;
-        color: #eaeaea;
-    }
