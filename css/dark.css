@@ -27,7 +27,7 @@ body {
             background-color: #292929; /* Add a hover color */
         }
 
-.active {
+.active_icon {
     background-color: #04AA6D; /* Add an active/current color */
 }
 
@@ -54,3 +54,50 @@ body {
         .sidenav a:hover {
             color: white;
         }
+
+/* Accordéon */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+    }
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.accordion-content {
+    background-color: #cdcdcd;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.download_links {
+    color: #292929;
+    text-decoration: none;
+    list-style-type: none;
+}
