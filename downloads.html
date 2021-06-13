@@ -14,7 +14,7 @@
 
     <title>RARE | Downloads</title>
 </head>
-<body id="body">
+<body onload="applyMode(document.referrer)">
 
     <div class="icon-bar navbar">
         <a class="active_icon" href="index.html"><i class="fa fa-home"></i></a>
@@ -27,14 +27,20 @@
 
     <div id="container">
 
+        <div class="sidenav">
+            <a href="downloads.html" rel="section">Downloads</a>
+            <a href="settings.html" rel="section">Settings</a>
+            <a href="other.html" rel="section">Other</a>
+        </div>
+
         <h2>Downloads :</h2>
         <!-- 1.17 -->
         <button class="accordion">Downloads for MC version 1.17</button>
         <div class="accordion-content">
             <p>
                 <ul class="download_links">
-                    <li><a class="download_links" href="downloads/Dark Smooth GUI 1.17.zip">Dark Smooth GUI</a></li>
-                    <li><a class="download_links" href="downloads/Light Smooth GUI 1.17.zip">Light Smooth GUI</a></li>
+                    <li><a class="download_link" href="downloads/Dark Smooth GUI 1.17.zip">Dark Smooth GUI</a></li>
+                    <li><a class="download_link" href="downloads/Light Smooth GUI 1.17.zip">Light Smooth GUI</a></li>
                 </ul>
             </p>
         </div>
@@ -44,8 +50,8 @@
         <div class="accordion-content">
             <p>
                 <ul class="download_links">
-                    <li><a class="download_links" href="downloads/Dark Smooth GUI 1.16.X.zip">Dark Smooth GUI</a></li>
-                    <li><a class="download_links" href="downloads/Light Smooth GUI 1.16.X.zip">Light Smooth GUI</a></li>
+                    <li><a class="download_link" href="downloads/Dark Smooth GUI 1.16.X.zip">Dark Smooth GUI</a></li>
+                    <li><a class="download_link" href="downloads/Light Smooth GUI 1.16.X.zip">Light Smooth GUI</a></li>
                 </ul>
             </p>
         </div>

@@ -55,7 +55,7 @@ body {
             color: #eaeaea;
         }
 
-/* Accordéon */
+/* Accordion */
 .accordion {
     background-color: #292929;
     color: #eee;
@@ -97,7 +97,61 @@ body {
 }
 
 .download_links {
+    list-style-type: none;
+}
+
+.download_link {
     color: #eee;
     text-decoration: none;
-    list-style-type: none;
+}
+
+    .download_link:hover {
+        text-decoration: underline;
+    }
+
+/* Settings of the menu and the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+        display: block;
+        background-color: inherit;
+        color: #292929;
+        font-size: 18px;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active_menu {
+            background-color: #ccc;
+        }
+
+/* Style the tab panel. Note: the first tab should be shown by default */
+.tab-content {
+    float: left;
+    padding: 0px 12px;
+    border: 2px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+    background-color: #ccc;
+    color: #292929;
+    font-size: 16px;
 }

@@ -6,9 +6,22 @@ function changeMode(self) {
 	if (currentUsedModeIcon.getAttribute("class") == "fas fa-sun" ) {
 		currentUsedCSSFile.setAttribute("href", "css/light.css");
 		currentUsedModeIcon.setAttribute("class", "fas fa-moon");
+		localStorage.setItem("mode", "light");
 	}
 	else if (currentUsedModeIcon.getAttribute("class") == "fas fa-moon") {
 		currentUsedCSSFile.setAttribute("href", "css/dark.css");
 		currentUsedModeIcon.setAttribute("class", "fas fa-sun");
+		localStorage.setItem("mode", "dark");
 	}
+}
+
+function applyMode(previousPage) {
+	var mode = localStorage.getItem("mode");
+
+	if (mode == "dark") {
+		document.getElementById("theme").setAttribute("href", "css/dark.css");
+	}
+	else if (mode == "light") {
+		document.getElementById("theme").setAttribute("href", "css/light.css");
+    }
 }
