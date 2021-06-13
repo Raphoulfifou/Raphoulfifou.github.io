@@ -1,5 +1,5 @@
 ﻿/* Main page */
-function changeMode(self) {
+function changeMode() {
 	var currentUsedCSSFile = document.getElementById("theme");
 	var currentUsedModeIcon = document.getElementById("mode_icon");
 
@@ -15,13 +15,16 @@ function changeMode(self) {
 	}
 }
 
-function applyMode(previousPage) {
+function applyMode() {
 	var mode = localStorage.getItem("mode");
+	var currentUsedModeIcon = document.getElementById("mode_icon");
 
 	if (mode == "dark") {
 		document.getElementById("theme").setAttribute("href", "css/dark.css");
+		currentUsedModeIcon.setAttribute("class", "fas fa-sun");
 	}
 	else if (mode == "light") {
 		document.getElementById("theme").setAttribute("href", "css/light.css");
+		currentUsedModeIcon.setAttribute("class", "fas fa-moon");
     }
 }
