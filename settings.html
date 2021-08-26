@@ -2,18 +2,24 @@
 <html lang="en">
 
 <head>
+<!-- Meta -->
     <meta charset="utf-8" />
+
+<!-- Link -->
     <link rel="icon" href="images/rare_logo.png" />
 
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/dark.css" type="text/css" id="theme" />
-    <link rel="stylesheet" href="css/settings.css" type="text/css" />
-
+<!-- Script -->
     <script src="https://kit.fontawesome.com/5da1866548.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
 
-    <title>RARE | Settings</title>
+<!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" id="theme" />
+
+<title>RARE | Settings</title>
 </head>
+
 <body onload="applyMode()">
 
     <div class="icon-bar navbar">
@@ -48,7 +54,16 @@
 
         <div id="Theme" class="tab-content">
             <h3>Theme</h3>
-            <p>Choose a theme :</p>
+            <div>
+                <p>Sync theme with OS: 
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                </p>
+            </div>
+
+            <p>Choose a theme : <button id="selectedMode">Dark Mode</button></p>
         </div>
 
         <div id="Language" class="tab-content">
