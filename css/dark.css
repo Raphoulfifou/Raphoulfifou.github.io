@@ -112,6 +112,7 @@ body {
 /* Settings of the menu and the tab */
 .tab {
     float: left;
+    margin-left: -10%;
     background-color: #f1f1f1;
     width: 30%;
     height: 300px;
@@ -169,8 +170,8 @@ body {
         height: 0;
     }
   
-/* The slider */
-.slider {
+/* The OS slider */
+.sliderOS {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -182,7 +183,7 @@ body {
     transition: .4s;
 }
 
-    .slider:before {
+    .sliderOS:before {
         position: absolute;
         content: "";
         height: 16px;
@@ -194,25 +195,79 @@ body {
         transition: .4s;
     }
   
-    input:checked + .slider {
+    input:checked + .sliderOS {
         background-color: lime;
     }
     
-    input:focus + .slider {
+    input:focus + .sliderOS {
         box-shadow: 0 0 1px lime;
     }
     
-    input:checked + .slider:before {
+    input:checked + .sliderOS:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+  
+/* Rounded sliders */
+.sliderOS.round {
+    border-radius: 34px;
+}
+  
+    .sliderOS.round:before {
+        border-radius: 50%;
+    }
+
+/* The Mode slider */
+.sliderMode {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eeeeee;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .sliderMode:before {
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 5px;
+        -webkit-transition: .4s;
+        transition: .4s;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f042";
+    }
+
+    input:checked + .sliderMode {
+        background-color: slategrey;
+    }
+    
+    input:focus + .sliderMode {
+        box-shadow: 0 0 1px slategrey;
+    }
+    
+    input:checked + .sliderMode:before {
         -webkit-transform: translateX(20px);
         -ms-transform: translateX(20px);
         transform: translateX(20px);
     }
   
   /* Rounded sliders */
-.slider.round {
+.sliderMode.round {
     border-radius: 34px;
 }
   
-    .slider.round:before {
+    .sliderMode.round:before {
         border-radius: 50%;
-    } 
+    }
