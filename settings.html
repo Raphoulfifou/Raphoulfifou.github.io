@@ -12,7 +12,6 @@
     <script src="https://kit.fontawesome.com/5da1866548.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/theme.js"></script>
-    <script type="text/javascript" src="js/settings.js"></script>
 
 <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" type="text/css" />
@@ -21,7 +20,7 @@
 <title>RARE | Settings</title>
 </head>
 
-<body onload="applyMode()">
+<body onload="loadUtils()">
 
     <div class="icon-bar navbar">
         <abbr title="Home page"><a class="active_icon" href="index.html"><i class="fa fa-home"></i></a></abbr>
@@ -43,8 +42,8 @@
         <h2>Settings : </h2>
 
         <div class="tab">
-            <button class="tab-links" onclick="openMenu(event, 'General')" id="defaultOpen">General</button>
-            <button class="tab-links" onclick="openMenu(event, 'Theme')">Theme</button>
+            <button class="tab-links" onclick="openMenu(event, 'General')">General</button>
+            <button class="tab-links" onclick="openMenu(event, 'Theme')" id="defaultOpen">Theme</button>
             <button class="tab-links" onclick="openMenu(event, 'Language')">Language</button>
         </div>
 
@@ -56,20 +55,13 @@
         <div id="Theme" class="tab-content">
             <h3>Theme</h3>
             <div>
-                <p>Sync theme with OS: 
+                <p>Synchronise theme with system: 
                     <label class="switch">
                         <input type="checkbox">
-                        <span class="sliderOS round"></span>
+                        <span class="sliderOS round" id="OSSlider" onclick="setOSItem(true)"></span>
                     </label>
                 </p>
             </div>
-
-            <p>Choose a theme : 
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="sliderMode round"></span>
-                </label>
-            </p>
         </div>
 
         <div id="Language" class="tab-content">
@@ -85,6 +77,8 @@
 
         
     </div>
+    
+    <script type="text/javascript" src="js/settings.js"></script>
 
 </body>
 </html>
