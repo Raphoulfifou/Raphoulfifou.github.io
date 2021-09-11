@@ -3,7 +3,7 @@
 function loadUtils()
 {
     applyMode();
-    checkPressedSliders();
+    //checkPressedSliders();
 }
 
 function changeMode()
@@ -29,36 +29,29 @@ function applyMode() {
 	var mode = localStorage.getItem("mode");
 	var currentUsedModeIcon = document.getElementById("mode_icon");
 
-    if (localStorage.getItem("SyncWOS") == true)
+    if (mode == "dark")
     {
-        changeModeOS();
+        document.getElementById("theme").setAttribute("href", "css/dark.css");
+        currentUsedModeIcon.setAttribute("class", "fas fa-sun");
     }
-    else if (localStorage.getItem("SyncWOS") ==  false)
+    else if (mode == "light")
     {
-        if (mode == "dark")
-        {
-            document.getElementById("theme").setAttribute("href", "css/dark.css");
-            currentUsedModeIcon.setAttribute("class", "fas fa-sun");
-        }
-        else if (mode == "light")
-        {
-            document.getElementById("theme").setAttribute("href", "css/light.css");
-            currentUsedModeIcon.setAttribute("class", "fas fa-moon");
-        }
-    }	
+        document.getElementById("theme").setAttribute("href", "css/light.css");
+        currentUsedModeIcon.setAttribute("class", "fas fa-moon");
+    }
 }
 
 function checkPressedSliders()
 {
     if (localStorage.getItem("SyncWOS") == true)
     {
-        document.getElementById("OSSlider").click.call;
+        document.getElementById("OSSlider").click(setOSItem(false));
     }
 }
 
-function setOSItem(doClick)
+function setOSItem(changeThemeOnClick)
 {
-    if (doClick == true)
+    if (changeThemeOnClick == true)
     {
         if (localStorage.getItem("SyncWOS") == null)
         {
