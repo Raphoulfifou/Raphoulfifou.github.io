@@ -43,8 +43,8 @@
 
         <div class="tab">
             <button class="tab-links" onclick="openMenu(event, 'General')">General</button>
-            <button class="tab-links" onclick="openMenu(event, 'Theme')" id="defaultOpen">Theme</button>
-            <button class="tab-links" onclick="openMenu(event, 'Language')">Language</button>
+            <button class="tab-links" onclick="openMenu(event, 'Theme')">Theme</button>
+            <button class="tab-links" onclick="openMenu(event, 'Language')" id="defaultOpen">Language</button>
         </div>
 
         <div id="General" class="tab-content">
@@ -67,17 +67,25 @@
         <div id="Language" class="tab-content">
             <h3>Language</h3>
             <p>
+                <p>Synchronise language with system: 
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="sliderLang round" id="LangSlider" onclick="setOSItem(true)"></span>
+                    </label>
+                </p>
                 Choose a language :
                 <ul>
-                    <li><p>English</p></li>
-                    <li><p>Français (French)</p></li>
+                    <div class="buttonLang">
+                        <button class="button active_button" id="en" onclick="setActiveButton(this)">English</button>
+                        <button class="button" id="fr" onclick="setActiveButton(this)">Français</button>
+                        <button class="button" id="es" onclick="setActiveButton(this)">Spanish</button>
+                        <button class="button" id="de" onclick="setActiveButton(this)">Deutsch</button>
+                    </div>
                 </ul>
             </p>
-        </div>
-
-        
+        </div>  
     </div>
-    
+
     <script type="text/javascript" src="js/settings.js"></script>
 
 </body>
