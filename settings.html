@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="pageLang">
 
 <head>
 <!-- Meta -->
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Link -->
     <link rel="icon" href="images/rare_logo.png" />
@@ -67,25 +68,35 @@
         <div id="Language" class="tab-content">
             <h3>Language</h3>
             <p>
-                <p>Synchronise language with system: 
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="sliderLang round" id="LangSlider" onclick="setOSItem(true)"></span>
-                    </label>
-                </p>
-                Choose a language :
-                <ul>
-                    <div class="buttonLang">
-                        <button class="button active_button" id="en" onclick="setActiveButton(this)">English</button>
-                        <button class="button" id="fr" onclick="setActiveButton(this)">Français</button>
-                        <button class="button" id="es" onclick="setActiveButton(this)">Spanish</button>
-                        <button class="button" id="de" onclick="setActiveButton(this)">Deutsch</button>
-                    </div>
-                </ul>
+                
+                <div>
+                    <div class="template"><div>{{SyncLangWOS}}</div></div>
+                    <div id="translation">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="sliderLang round" id="LangSlider" onclick="setOSItem(true)"></span>
+                        </label>
+                    <div>
+
+                    
+                </div>
+                <div>
+                    <label for="lang">Choose a language:</label>
+
+                    <select name="lang" id="lang">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="es">Español</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+
+                    <button id="btn" onclick="change_lang()">Apply</button>
+                </div>
             </p>
-        </div>  
+        </div> 
     </div>
 
+    <script type="text/javascript" src="js/lang.js"></script>
     <script type="text/javascript" src="js/settings.js"></script>
 
 </body>

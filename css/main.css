@@ -32,6 +32,10 @@ span {
     text-decoration: underline;
 }
 
+.template {
+    display: none;
+}
+
 #footer {
     text-align: center;
     font-size: 12px;
