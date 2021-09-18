@@ -10,41 +10,39 @@ var dict = {
     en: {
         "SyncThemeWOS": "Synchronise theme with system:",
         "SyncLangWOS": "Synchronise language with system:",
-        "ChooseLang": "Choose a language:"
+        "ChooseLang": "Choose a language:",
+        "Apply": "Apply",
+
+        // Settings pages header
+        "LanguageSettingsPage": "Language",
+        "ThemeSettingsPage": "Theme",
+        "GeneralSettingsPage": "General",
+
+        // Menus
+        "GeneralSettingsMenu": "General",
+        "ThemeSettingsMenu": "Theme",
+        "LanguageSettingsMenu": "Language"
     },
 
     fr: {
         "SyncThemeWOS": "Synchroniser le thème avec le système:",
         "SyncLangWOS": "Synchroniser la langue avec le système:",
-        "ChooseLang": "Choisissez une langue:"
+        "ChooseLang": "Choisissez une langue:",
+        "Apply": "Appliquer",
+
+        "LanguageSettingsPage": "Language",
+        "ThemeSettingsPage": "Thème",
+        "GeneralSettingsPage": "Général",
+
+        "GeneralSettingsMenu": "Général",
+        "ThemeSettingsMenu": "Thème",
+        "LanguageSettingsMenu": "Language"
     }
 }
 
-var lang = "en";
+let langs = ["en", "fr"]
+var lang = localStorage.getItem("lang");
 //var tmpl = "<div>{{Goodbye}}, {{castle}}</div>";
-/*
-translationsArray.forEach(element2 => {
-    var translation = element2;
-    let trlt = translation;
-});
-
-templatesArray.forEach(element => {
-        function translate(dict, lang, word) {
-            return dict[lang][word];
-        }
-        
-        function applyTemplate(tmpl, lang) {
-            var regex = /\{\{([a-zA-Z])\w+\}\}/g
-            return tmpl.replace(regex, function (word) {
-                return translate(dict, lang, word.replace(/[\{\}]/g, ""));
-            });
-        }
-        
-        var tmpl = element.textContent;
-        var translation  = translationsArray[element];
-        var html = applyTemplate(tmpl, lang);
-        translation.insertAdjacentHTML("afterbegin", html);
-});*/
 
 for (let i = 0; i < templatesArray.length; i++)
 {
@@ -65,7 +63,34 @@ for (let i = 0; i < templatesArray.length; i++)
     translation.insertAdjacentHTML("afterbegin", html);
 }
 
-/*
+function changeLang()
+{
+    var val = document.querySelector("#lang").value;
+    
+    localStorage.setItem("lang", val);
+    for (let i = 0; i < langs.length; i++)
+    {
+        if (langs[i] == val)
+        {
+            langIndex = i;
+        }
+    }
+    window.location.reload();
+} 
+
+window.onload = function()
+{
+    var l = localStorage.getItem("lang");
+    for (let i = 0; i < langs.length; i++)
+    {
+        if (langs[i] == l)
+        {
+            document.querySelector("#lang").selectedIndex = i;
+        }
+    }
+}
+
+/* => base code (only works for on element)
 function translate(dict, lang, word) {
     return dict[lang][word];
 }

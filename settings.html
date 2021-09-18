@@ -43,18 +43,42 @@
         <h2>Settings : </h2>
 
         <div class="tab">
-            <button class="tab-links" onclick="openMenu(event, 'General')">General</button>
-            <button class="tab-links" onclick="openMenu(event, 'Theme')">Theme</button>
-            <button class="tab-links" onclick="openMenu(event, 'Language')" id="defaultOpen">Language</button>
+            <button class="tab-links" onclick="openMenu(event, 'General')">
+                <div>
+                    <div class="template"><div>{{GeneralSettingsMenu}}</div></div>
+                </div>
+                <div id="translation"></div>
+            </button>
+            <button class="tab-links" onclick="openMenu(event, 'Theme')">
+                <div>
+                    <div class="template"><div>{{ThemeSettingsMenu}}</div></div>
+                </div>
+                <div id="translation"></div>
+            </button>
+            <button class="tab-links" onclick="openMenu(event, 'Language')" id="defaultOpen">
+                <div>
+                    <div class="template"><div>{{LanguageSettingsMenu}}</div></div>
+                </div>
+                <div id="translation"></div>
+            </button>
         </div>
 
         <div id="General" class="tab-content">
-            <h3>General</h3>
-            <p>General settings</p>
+            <h3>
+                <div>
+                    <div class="template"><div>{{GeneralSettingsPage}}</div></div>
+                </div>
+                <div id="translation"></div>
+            </h3>
         </div>
 
         <div id="Theme" class="tab-content">
-            <h3>Theme</h3>
+            <h3>
+                <div>
+                    <div class="template"><div>{{ThemeSettingsPage}}</div></div>
+                </div>
+                <div id="translation"></div>
+            </h3>
             <p>
 
                 <div>
@@ -71,7 +95,12 @@
         </div>
 
         <div id="Language" class="tab-content">
-            <h3>Language</h3>
+            <h3>
+                <div>
+                    <div class="template"><div>{{LanguageSettingsPage}}</div></div>
+                </div>
+                <div id="translation"></div>
+            </h3>
             <p>
                 
                 <div>
@@ -79,11 +108,11 @@
                     <div id="translation">
                         <label class="switch">
                             <input type="checkbox">
-                            <span class="sliderLang round" id="LangSlider" onclick="setOSItem(true)"></span>
+                            <span class="sliderLang round" id="LangSlider" onclick="setOSItem(lang, true)"></span>
                         </label>
                     </div>
-
                 </div>
+                <br>
 
                 <div>
 
@@ -92,16 +121,13 @@
                             <div class="template"><div>{{ChooseLang}}</div></div>
                         </div>
                     </label>
-                    <div id="translation"></div>
+                    <div id="translation">
+                        <select name="lang" id="lang" onchange="changeLang()">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
 
-                    <select name="lang" id="lang">
-                        <option value="en">English</option>
-                        <option value="fr">Français</option>
-                        <option value="es">Español</option>
-                        <option value="de">Deutsch</option>
-                    </select>
-
-                    <button id="btn" onclick="change_lang()">Apply</button>
                 </div>
             </p>
         </div> 
