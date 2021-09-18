@@ -55,14 +55,19 @@
 
         <div id="Theme" class="tab-content">
             <h3>Theme</h3>
-            <div>
-                <p>Synchronise theme with system: 
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="sliderOS round" id="OSSlider" onclick="setOSItem(true)"></span>
-                    </label>
-                </p>
-            </div>
+            <p>
+
+                <div>
+                    <div class="template"><div>{{SyncThemeWOS}}</div></div>
+                    <div id="translation">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="sliderOS round" id="OSSlider" onclick="setOSItem(true)"></span>
+                        </label>
+                    </div>
+                </div>
+
+            </p>
         </div>
 
         <div id="Language" class="tab-content">
@@ -76,12 +81,18 @@
                             <input type="checkbox">
                             <span class="sliderLang round" id="LangSlider" onclick="setOSItem(true)"></span>
                         </label>
-                    <div>
+                    </div>
 
-                    
                 </div>
+
                 <div>
-                    <label for="lang">Choose a language:</label>
+
+                    <label for="lang">
+                        <div>
+                            <div class="template"><div>{{ChooseLang}}</div></div>
+                        </div>
+                    </label>
+                    <div id="translation"></div>
 
                     <select name="lang" id="lang">
                         <option value="en">English</option>
